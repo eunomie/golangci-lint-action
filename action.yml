@@ -1,0 +1,6 @@
+name: 'golangci-lint'
+description: 'golangci-lint'
+author: 'Yves Brissaud'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
