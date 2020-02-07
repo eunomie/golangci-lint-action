@@ -2,6 +2,8 @@
 
 set -e
 
+cd ${GITHUB_WORKSPACE}
+
 VERBOSE_OPT=""
 [ ! -z "${INPUT_VERBOSE}" ] && VERBOSE_OPT="-v"
 
