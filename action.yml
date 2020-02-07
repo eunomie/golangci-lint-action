@@ -1,6 +1,20 @@
 name: 'golangci-lint'
-description: 'golangci-lint'
+description: 'golangci-lint: Linters Runner for Go'
 author: 'Yves Brissaud'
+branding:
+  icon: 'alert-triangle'
+  color: 'green'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+inputs:
+  config:
+    description: 'Path to read config file from'
+    required: false
+  verbose:
+    description: 'Verbose output'
+    required: false
+  action:
+    description: 'golangci-lint action to execute'
+    default: 'run'
+    required: false
