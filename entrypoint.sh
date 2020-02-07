@@ -11,4 +11,11 @@ CONFIG_OPT=""
 ACTION="run"
 [ ! -z "${INPUT_ACTION}" ] && ACTION=${INPUT_ACTION}
 
-sh -c "GO111MODULE=on golangci-lint ${VERBOSE_OPT} ${ACTION} ${CONFIG_OPT}"
+cmd="GO111MODULE=on golangci-lint ${VERBOSE_OPT} ${ACTION} ${CONFIG_OPT}"
+
+if [ ! -z "${VERBOSE_OPT}" ]; then
+  go env
+  echo ${cmd}
+fi
+
+sh -c "${cmd}"
